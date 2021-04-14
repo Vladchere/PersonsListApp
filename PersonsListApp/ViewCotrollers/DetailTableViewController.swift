@@ -15,7 +15,6 @@ class DetailTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         return persons.count
     }
@@ -30,6 +29,7 @@ class DetailTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellDetail", for: indexPath)
+		cell.selectionStyle = UITableViewCell.SelectionStyle.none
         
         switch indexPath.row {
         case 0:
